@@ -12,7 +12,7 @@ public class MainFrame_SERVER extends JFrame {
     private JTextArea jtextarea_log;
     public CorePanel core_panel;
     private OptionPanel option_panel;
- 
+    private static Server server;
 	
 	public static MainFrame_SERVER getInstance(){
 		return MainFrameInstantiator.INSTANCE;
@@ -51,11 +51,14 @@ public class MainFrame_SERVER extends JFrame {
 		add(core_panel);
 		add(option_panel);
 		setVisible(true);
+		
 	}
 	
 	public static void main(String args[]){
 		MainFrame_SERVER.getInstance();
-		Server.getInstance().start();
+
+		server=Server.getInstance();
+		server.start();
 	}
 
 }
