@@ -56,7 +56,7 @@ public class MainFrame_SERVER extends JFrame {
 	
 	public static void main(String args[]){
 		MainFrame_SERVER.getInstance();
-
+		//l
 		server=Server.getInstance();
 		server.start();
 	}
